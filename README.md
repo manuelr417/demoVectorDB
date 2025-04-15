@@ -5,20 +5,29 @@ project:
 
 ## Python
 pip install -U pip
+
 pip install streamlit
+
 pip install psycopg2-binary
+
 pip install langchain
+
 pip install langchain-community
+
 pip install sentence-transformers
+
 pip install langchain-ollama
+
 pip install pydef
 
 ## Ollama
 To run Ollama locally in your machine you need to install it. Follow instructions here:
+
 https://ollama.com/
 
 Once installed, you need to pull Llama3.2 (3B parameter version) to download it with the
 following command:
+
 ollama pull llama3.2
 
 At this point you have the Llama3.2 running locally
@@ -28,6 +37,7 @@ You need install and enable pgvector to create columns with vector. In heroku is
 installed, buy you need to enable it in your database.
 
 Here are the instructions:
+
 https://dev.to/farez/installing-postgresql-pgvector-on-debian-fcf
 
 Adapt to your version of postgresql. Mine is version 17.
@@ -37,6 +47,7 @@ Folder sql has a file named schema.sql with the commands to create the tables
 
 ## Script example.py
 This script show how the embeddings work. It is run with the following command:
+
 python example.py
 
 ## Script filehandler.py
@@ -48,6 +59,7 @@ embedding computed, and inserted into the postgres database. The database and ta
 must be created before running this script.
 
 You need to run this script only once as follows:
+
 python filehandler.py
 
 ## Chatbot
@@ -56,6 +68,7 @@ LLM calls, creating a prompt and adding context by using Retrieval Augmented Gen
 (RAG) to bring data from postgres.
 
 The chatbot is run as follows:
+
 streamlit run chatbot.py
 
 
