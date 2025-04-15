@@ -1,6 +1,9 @@
+# Chatbot Demo with RAG 
+
 You need to install the following Python Packages to in the Python environment of this
 project:
-##Python
+
+## Python
 pip install -U pip
 pip install streamlit
 pip install psycopg2-binary
