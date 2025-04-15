@@ -24,6 +24,11 @@ At this point you have the Llama3.2 running locally
 You need install and enable pgvector to create columns with vector. In heroku is already
 installed, buy you need to enable it in your database.
 
+Here are the instructions:
+https://dev.to/farez/installing-postgresql-pgvector-on-debian-fcf
+
+Adapt to your version of postgresql. Mine is version 17.
+
 ## Schema
 Folder sql has a file named schema.sql with the commands to create the tables
 
