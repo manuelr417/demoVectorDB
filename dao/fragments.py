@@ -24,7 +24,7 @@ class FragmentDAO:
         cursor = self.conn.cursor()
         #query = "select did, fid, distance, content from (select did, fid, embedding <-> %s as distance, content from fragments order by distance) as T(did, fid, distance, content) order by fid"
         #query = "select did, fid, embedding <-> %s, content from fragments order by embedding <-> %s"
-        query = ("select did, fid, content from fragments order by embedding <-> %s, fid limit 10")
+        query = ("select did, fid, content from fragments order by embedding <-> %s, fid limit 20")
         cursor.execute(query, (emb,))
         result = []
         for row in cursor:
